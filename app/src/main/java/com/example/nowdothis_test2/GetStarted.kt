@@ -12,10 +12,8 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ImageView
 import android.widget.Toast
-import android.widget.VideoView
 import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
-import kotlinx.coroutines.NonCancellable.start
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
@@ -111,8 +109,6 @@ class GetStarted : AppCompatActivity() {
                 edtxtPassword.setBackgroundColor(Color.parseColor("#FFAAAA"))
             }
         }
-
-
     }
 
     private fun leerUsuariosJson(context: Context): List<Usuario> {
