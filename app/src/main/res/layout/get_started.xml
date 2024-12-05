@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- VideoView para mostrar el video de fondo -->
+    <ImageView
+        android:id="@+id/imageFondo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#D1A7D6"/>
+
+    <!-- Contenido de la interfaz de usuario, encima del video -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- EditText de usuario -->
+        <EditText
+            android:id="@+id/edtxtUser"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="User"
+            android:textAlignment="center"
+            android:visibility="gone"
+            android:layout_margin="10dp"
+            android:background="@color/white"
+            android:inputType="textPersonName"/>
+
+        <!-- EditText de contraseña -->
+        <EditText
+            android:id="@+id/edtxtPassword"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:hint="Password"
+            android:textAlignment="center"
+            android:inputType="textPassword"
+            android:visibility="gone"
+            android:background="@color/white"
+            android:layout_margin="10dp"/>
+
+        <!-- Botón de "Get Started" -->
+        <Button
+            android:id="@+id/btnGetStarted"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Get Started"
+            android:layout_marginTop="400dp"
+            android:backgroundTint="#BBBBBB"
+            android:textColor="@color/black"/>
+
+        <!-- Botón de "Sign In" -->
+        <Button
+            android:id="@+id/btnSignIn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="Sign in"
+            android:backgroundTint="#BBBBBB"
+            android:textColor="@color/black"
+            android:visibility="gone"/>
+    </LinearLayout>
+</FrameLayout>
