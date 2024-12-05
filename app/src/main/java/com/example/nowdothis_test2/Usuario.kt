@@ -1,6 +1,7 @@
 package com.example.nowdothis_test2
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 // Clase Usuario adaptada para manejar ambos casos
 data class Usuario(
@@ -30,4 +31,4 @@ data class Usuario(
 
     @SerializedName("fechaIngreso")
     val fechaIngreso: String? = null
-)
+): Serializable

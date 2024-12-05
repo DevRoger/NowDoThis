@@ -8,11 +8,15 @@ import com.example.nowdothis_test2.Fragments.SettingsFragment
 import com.example.nowdothis_test2.Fragments.UserFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
+@Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Recuperamos user
+        val user = intent.getSerializableExtra("user") as? Usuario
 
         // Configura el BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
@@ -21,15 +25,21 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.nav_home -> {
-                    openFragment(HomeFragment())
+                    user?.let {
+                        openFragment(HomeFragment(), it)  // Pasamos 'user' al fragmento
+                    }
                     true
                 }
                 R.id.nav_user -> {
-                    openFragment(UserFragment())
+                    user?.let {
+                        openFragment(UserFragment(), it)  // Pasamos 'user' al fragmento
+                    }
                     true
                 }
                 R.id.nav_settings -> {
-                    openFragment(SettingsFragment())
+                    user?.let {
+                        openFragment(SettingsFragment(), it)  // Pasamos 'user' al fragmento
+                    }
                     true
                 }
                 else -> false
@@ -43,7 +53,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Método para cargar fragmentos
-    private fun openFragment(fragment: Fragment) {
+    private fun openFragment(fragment: Fragment, user: Usuario) {
+        val bundle = Bundle()
+        bundle.putSerializable("user", user)  // Pasa el objeto 'user' al Bundle
+        fragment.arguments = bundle  // Establece el Bundle en el fragmento
+
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, fragment)
             .commit()

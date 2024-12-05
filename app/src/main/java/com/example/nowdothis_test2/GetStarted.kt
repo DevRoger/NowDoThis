@@ -97,6 +97,7 @@ class GetStarted : AppCompatActivity() {
             if (user != null) {
                 Toast.makeText(this, "Inicio de sesión correcto!", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, MainActivity::class.java)
+                intent.putExtra("user", user)
                 startActivity(intent)
                 finish()
             } else {
