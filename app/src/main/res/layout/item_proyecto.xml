@@ -4,20 +4,41 @@
     android:orientation="vertical"
     android:padding="16dp">
 
+    <!-- Nombre del Proyecto -->
     <TextView
         android:id="@+id/tvNombreProyecto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:textStyle="bold"
+        android:text="Nombre del Proyecto"
         android:textColor="#000"
-        android:text="Nombre del Proyecto" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
+    <!-- Descripción del Proyecto -->
     <TextView
         android:id="@+id/tvDescripcionProyecto"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="14sp"
+        android:text="Descripción del Proyecto"
         android:textColor="#666"
-        android:text="Descripción del Proyecto" />
+        android:textSize="14sp" />
+
+    <!-- Fechas de inicio y fin -->
+    <TextView
+        android:id="@+id/tvFechasProyecto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Fecha de inicio: 01/04/2024 - Fecha de fin estimada: 30/06/2024"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
+    <!-- Lista de Tareas -->
+    <TextView
+        android:id="@+id/tvTareasProyecto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tareas:\n- Tarea 1: Diseño de la base de datos (Completado)\n- Tarea 2: Desarrollo del frontend (En progreso)\n- Tarea 3: Desarrollo del backend (Pendiente)"
+        android:textColor="#000"
+        android:textSize="14sp" />
+
 </LinearLayout>

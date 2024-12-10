@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.nowdothis_test2.R
-import com.example.nowdothis_test2.Usuario
+import com.example.nowdothis_test2.Clases.Usuario
 
 class UserFragment : Fragment(R.layout.fragment_user) {
     private var user: Usuario? = null

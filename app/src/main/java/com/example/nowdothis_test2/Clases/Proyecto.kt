@@ -1,4 +1,4 @@
-package com.example.nowdothis_test2
+package com.example.nowdothis_test2.Clases
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable

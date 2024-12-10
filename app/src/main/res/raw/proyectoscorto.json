@@ -1,0 +1,114 @@
+[
+  {
+    "id": 1,
+    "nombre": "Desarrollo de una aplicación web",
+    "descripcion": "Crear una aplicación web para gestionar inventario",
+    "fechaInicio": "2024-04-01",
+    "fechaFinEstimada": "2024-06-30",
+    "tareas": [
+      {
+        "id": 1,
+        "descripcion": "Diseño de la base de datos",
+        "estadoTarea": "Completado",
+        "asignadoA": [
+          {
+            "idUsuario": 101,
+            "nombre": "María García",
+            "horasTrabajadas": 10.0
+          },
+          {
+            "idUsuario": 102,
+            "nombre": "Pedro Rodríguez",
+            "horasTrabajadas": 8.5
+          }
+        ],
+        "fechaInicio": "2024-04-02",
+        "fechaFin": "2024-04-10",
+        "prioridad": "Alta",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 2,
+        "descripcion": "Desarrollo del frontend",
+        "estadoTarea": "En progreso",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 20.0
+          }
+        ],
+        "fechaInicio": "2024-04-11",
+        "fechaFinEstimada": "2024-05-31",
+        "prioridad": "Media",
+        "tipoTarea": "Desarrollo"
+      },
+      {
+        "id": 3,
+        "descripcion": "Desarrollo del backend",
+        "estadoTarea": "Pendiente",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Alta",
+        "tipoTarea": "Desarrollo"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Rediseño de la identidad corporativa",
+    "descripcion": "Actualizar la imagen de la empresa",
+    "fechaInicio": "2024-05-15",
+    "fechaFinEstimada": "2024-08-31",
+    "tareas": [
+      {
+        "id": 4,
+        "descripcion": "Crear nuevo logotipo",
+        "estadoTarea": "Pendiente",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Alta",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 5,
+        "descripcion": "Diseñar nueva paleta de colores",
+        "estadoTarea": "Pendiente",
+        "asignadoA": [
+          {
+            "idUsuario": 102,
+            "nombre": "Pedro Rodríguez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Media",
+        "tipoTarea": "Diseño"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Implementación de un nuevo sistema de CRM",
+    "descripcion": "Mejorar la gestión de clientes",
+    "fechaInicio": "2024-07-01",
+    "fechaFinEstimada": "2024-09-30",
+    "tareas": []
+  }
+]
+  

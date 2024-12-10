@@ -4,6 +4,8 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.nowdothis_test2.Clases.Proyecto
+import com.example.nowdothis_test2.Clases.Usuario
 import com.example.nowdothis_test2.Fragments.HomeFragment
 import com.example.nowdothis_test2.Fragments.SettingsFragment
 import com.example.nowdothis_test2.Fragments.UserFragment
@@ -51,7 +53,11 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.nav_settings -> {
                     user?.let {
-                        openFragment(SettingsFragment(), it, proyectos)  // Pasamos 'user' al fragmento
+                        openFragment(
+                            SettingsFragment(),
+                            it,
+                            proyectos
+                        )  // Pasamos 'user' al fragmento
                     }
                     true
                 }

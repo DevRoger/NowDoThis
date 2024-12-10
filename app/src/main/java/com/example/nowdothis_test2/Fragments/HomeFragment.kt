@@ -8,10 +8,10 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ListView
 import androidx.fragment.app.Fragment
-import com.example.nowdothis_test2.Proyecto
+import com.example.nowdothis_test2.Clases.Proyecto
 import com.example.nowdothis_test2.R
 
-class HomeFragment: Fragment(R.layout.fragment_home) {
+class HomeFragment : Fragment(R.layout.fragment_home) {
 
     @SuppressLint("MissingInflatedId")
     override fun onCreateView(

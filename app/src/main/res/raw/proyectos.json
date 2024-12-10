@@ -109,6 +109,206 @@
     "fechaInicio": "2024-07-01",
     "fechaFinEstimada": "2024-09-30",
     "tareas": []
+  },
+  {
+    "id": 4,
+    "nombre": "Automatización del proceso de facturación",
+    "descripcion": "Desarrollar un sistema que automatice la emisión y seguimiento de facturas",
+    "fechaInicio": "2024-03-01",
+    "fechaFinEstimada": "2024-06-15",
+    "tareas": [
+      {
+        "id": 6,
+        "descripcion": "Análisis de requerimientos",
+        "estadoTarea": "Completado",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 15.0
+          }
+        ],
+        "fechaInicio": "2024-03-01",
+        "fechaFin": "2024-03-10",
+        "prioridad": "Alta",
+        "tipoTarea": "Análisis"
+      },
+      {
+        "id": 7,
+        "descripcion": "Diseño de interfaz de usuario",
+        "estadoTarea": "En progreso",
+        "asignadoA": [
+          {
+            "idUsuario": 101,
+            "nombre": "María García",
+            "horasTrabajadas": 12.0
+          }
+        ],
+        "fechaInicio": "2024-03-15",
+        "fechaFinEstimada": "2024-04-15",
+        "prioridad": "Media",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 8,
+        "descripcion": "Pruebas del sistema",
+        "estadoTarea": "Pendiente",
+        "asignadoA": [
+          {
+            "idUsuario": 106,
+            "nombre": "Carlos Méndez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Alta",
+        "tipoTarea": "Pruebas"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Creación de un programa de formación interna",
+    "descripcion": "Diseñar un curso para capacitar al equipo en nuevas tecnologías",
+    "fechaInicio": "2024-02-01",
+    "fechaFinEstimada": "2024-05-31",
+    "tareas": [
+      {
+        "id": 9,
+        "descripcion": "Investigación de contenidos",
+        "estadoTarea": "Completado",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 20.0
+          }
+        ],
+        "fechaInicio": "2024-02-01",
+        "fechaFin": "2024-02-20",
+        "prioridad": "Alta",
+        "tipoTarea": "Investigación"
+      },
+      {
+        "id": 10,
+        "descripcion": "Diseño del material didáctico",
+        "estadoTarea": "En progreso",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 18.5
+          }
+        ],
+        "fechaInicio": "2024-03-01",
+        "fechaFinEstimada": "2024-04-15",
+        "prioridad": "Media",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 11,
+        "descripcion": "Evaluación y pruebas piloto",
+        "estadoTarea": "Pendiente",
+        "asignadoA": [
+          {
+            "idUsuario": 102,
+            "nombre": "Pedro Rodríguez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Baja",
+        "tipoTarea": "Pruebas"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Expansión internacional",
+    "descripcion": "Abrir oficinas en mercados clave",
+    "fechaInicio": "2024-06-01",
+    "fechaFinEstimada": "2024-12-31",
+    "tareas": [
+      {
+        "id": 12,
+        "descripcion": "Estudio de mercado",
+        "estadoTarea": "Completado",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 30.0
+          },
+          {
+            "idUsuario": 106,
+            "nombre": "Carlos Méndez",
+            "horasTrabajadas": 25.0
+          }
+        ],
+        "fechaInicio": "2024-06-01",
+        "fechaFin": "2024-07-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Investigación"
+      },
+      {
+        "id": 13,
+        "descripcion": "Establecimiento de contactos locales",
+        "estadoTarea": "En progreso",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 10.0
+          }
+        ],
+        "fechaInicio": "2024-08-01",
+        "fechaFinEstimada": "2024-09-30",
+        "prioridad": "Alta",
+        "tipoTarea": "Logística"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Implementación de políticas de sostenibilidad",
+    "descripcion": "Crear un plan para reducir la huella de carbono de la empresa",
+    "fechaInicio": "2024-01-10",
+    "fechaFinEstimada": "2024-10-01",
+    "tareas": [
+      {
+        "id": 14,
+        "descripcion": "Auditoría ambiental",
+        "estadoTarea": "Completado",
+        "asignadoA": [
+          {
+            "idUsuario": 101,
+            "nombre": "María García",
+            "horasTrabajadas": 25.0
+          }
+        ],
+        "fechaInicio": "2024-01-10",
+        "fechaFin": "2024-02-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Auditoría"
+      },
+      {
+        "id": 15,
+        "descripcion": "Diseño del plan de acción",
+        "estadoTarea": "Pendiente",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Media",
+        "tipoTarea": "Planificación"
+      }
+    ]
   }
 ]
-  
