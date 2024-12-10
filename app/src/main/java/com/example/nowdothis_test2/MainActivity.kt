@@ -1,12 +1,18 @@
 package com.example.nowdothis_test2
 
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.nowdothis_test2.Fragments.HomeFragment
 import com.example.nowdothis_test2.Fragments.SettingsFragment
 import com.example.nowdothis_test2.Fragments.UserFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.io.BufferedReader
+import java.io.InputStream
+import java.io.InputStreamReader
 
 @Suppress("DEPRECATION")
 class MainActivity : AppCompatActivity() {
@@ -17,6 +23,11 @@ class MainActivity : AppCompatActivity() {
 
         // Recuperamos user
         val user = intent.getSerializableExtra("user") as? Usuario
+
+        // Leemos el JSON proyectos
+        val proyectos: List<Proyecto> = leerProyectosDesdeJson()
+
+        Log.i("Proyectos", proyectos.toString()) // Verificación de la lectura de proyectos.json
 
         // Configura el BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
@@ -30,18 +41,21 @@ class MainActivity : AppCompatActivity() {
                     }
                     true
                 }
+
                 R.id.nav_user -> {
                     user?.let {
                         openFragment(UserFragment(), it)  // Pasamos 'user' al fragmento
                     }
                     true
                 }
+
                 R.id.nav_settings -> {
                     user?.let {
                         openFragment(SettingsFragment(), it)  // Pasamos 'user' al fragmento
                     }
                     true
                 }
+
                 else -> false
             }
         }
@@ -61,5 +75,14 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragmentContainer, fragment)
             .commit()
+    }
+
+    private fun leerProyectosDesdeJson(): List<Proyecto> {
+        val inputStream: InputStream = resources.openRawResource(R.raw.proyectos)
+        val bufferedReader = BufferedReader(InputStreamReader(inputStream))
+        val json = bufferedReader.use { it.readText() }
+        val gson = Gson()
+        val tipoListaProyectos = object : TypeToken<List<Proyecto>>() {}.type
+        return gson.fromJson(json, tipoListaProyectos)
     }
 }

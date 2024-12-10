@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import com.example.nowdothis_test2.R
 import com.example.nowdothis_test2.Usuario
 
-class UserFragment: Fragment(R.layout.fragment_user) {
+class UserFragment : Fragment(R.layout.fragment_user) {
     private var user: Usuario? = null
 
     override fun onCreateView(

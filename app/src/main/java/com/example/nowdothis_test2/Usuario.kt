@@ -28,4 +28,4 @@ data class Usuario(
 
     @SerializedName("fechaIngreso")
     val fechaIngreso: String? = null
-): Serializable
+) : Serializable
