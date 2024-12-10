@@ -1,5 +1,6 @@
 package com.example.nowdothis_test2.Fragments
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -24,14 +25,27 @@ class UserFragment: Fragment(R.layout.fragment_user) {
     }
 
 
+    @SuppressLint("SetTextI18n")
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
 
-        var txtUser: TextView = view.findViewById(R.id.txtUser)
+        val txtUser: TextView = view.findViewById(R.id.txtUser)
+        val txtId: TextView = view.findViewById(R.id.txtId)
+        val txtEmail: TextView = view.findViewById(R.id.txtEmail)
+        val txtRol: TextView = view.findViewById(R.id.txtRol)
+        val txtTlf: TextView = view.findViewById(R.id.txtTlf)
+        val txtFechaIngreso: TextView = view.findViewById(R.id.txtFechaIngreso)
+
+
 
         user?.let {
             txtUser.text = it.nombre
+            txtId.text = "Id de usuario: " + it.id.toString()
+            txtEmail.text = "Correo: " + it.email
+            txtRol.text = "Rol: " + it.rol
+            txtTlf.text = "Telefono: " + it.telefono
+            txtFechaIngreso.text = "Fecha de ingreso: " + it.fechaIngreso
         }
     }
 }

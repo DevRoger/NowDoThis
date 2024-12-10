@@ -5,14 +5,11 @@ import java.io.Serializable
 
 // Clase Usuario adaptada para manejar ambos casos
 data class Usuario(
-    @SerializedName("idUsuario") // Usado en "asignadoA" del JSON
+    @SerializedName("id") // Usado en "asignadoA" del JSON
     val id: Int,
 
     @SerializedName("nombre")
     val nombre: String,
-
-/*    @SerializedName("horasTrabajadas") // Campo opcional, sólo presente en "asignadoA"
-    val horasTrabajadas: Double? = null,*/
 
     @SerializedName("apellido") // Campos adicionales, opcionales en este caso
     val apellido: String? = null,

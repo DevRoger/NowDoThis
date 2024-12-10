@@ -65,8 +65,10 @@ class GetStarted : AppCompatActivity() {
                         start()
                     }
                     // Cambiar los colores de la animación aquí
-                    ObjectAnimator.ofObject(imgFondo, "backgroundColor", ArgbEvaluator(),
-                        Color.parseColor("#D1A7D6"), Color.parseColor("#F2E7F3")).apply {
+                    ObjectAnimator.ofObject(
+                        imgFondo, "backgroundColor", ArgbEvaluator(),
+                        Color.parseColor("#D1A7D6"), Color.parseColor("#F2E7F3")
+                    ).apply {
                         duration = 800
                         start()
                     }

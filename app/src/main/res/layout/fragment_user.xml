@@ -26,6 +26,7 @@
         android:layout_marginHorizontal="10dp" >
 
         <TextView
+            android:id="@+id/txtId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Id de usuario: 101"
@@ -33,6 +34,7 @@
             android:paddingVertical="2dp"/>
 
         <TextView
+            android:id="@+id/txtEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Correo: correo@gmail.com"
@@ -40,6 +42,7 @@
             android:paddingVertical="2dp" />
 
         <TextView
+            android:id="@+id/txtRol"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Rol: Administrador"
@@ -47,6 +50,7 @@
             android:paddingVertical="2dp" />
 
         <TextView
+            android:id="@+id/txtTlf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Telefono: +34 612 12 34 56"
@@ -54,6 +58,7 @@
             android:paddingVertical="2dp" />
 
         <TextView
+            android:id="@+id/txtFechaIngreso"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Fecha de ingreso: 01 - 01 - 1970"
