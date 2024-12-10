@@ -11,7 +11,7 @@ data class Tarea(
     val descripcion: String,
 
     @SerializedName("estadoTarea")
-    val estadoTarea: String,
+    var estadoTarea: String,
 
     @SerializedName("asignadoA")
     val asignadoA: List<UsuarioAsignado>,

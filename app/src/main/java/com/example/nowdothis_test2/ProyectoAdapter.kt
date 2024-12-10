@@ -1,10 +1,14 @@
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 import com.example.nowdothis_test2.Clases.Proyecto
+import com.example.nowdothis_test2.Clases.ProyectoDetalleActivity
 import com.example.nowdothis_test2.R
 
 class ProyectoAdapter(private val context: Context, private val proyectos: List<Proyecto>) :
@@ -46,6 +50,19 @@ class ProyectoAdapter(private val context: Context, private val proyectos: List<
             "${tarea.descripcion} (${tarea.estadoTarea})"
         }
         tvTareasProyecto.text = "Tareas:\n$tareas"
+
+        view.setOnClickListener {
+            // Aquí es donde se inicia la actividad
+            val intent = Intent(context, ProyectoDetalleActivity::class.java)
+            intent.putExtra("proyecto", proyecto)  // Pasamos el proyecto
+
+            // Asegúrate de que el contexto no sea null
+            if (context is Activity) {
+                context.startActivity(intent)  // Usar el contexto para iniciar la actividad
+            } else {
+                Log.e("ProyectoAdapter", "Error: El contexto no es una actividad.")
+            }
+        }
 
         return view
     }
