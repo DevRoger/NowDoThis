@@ -37,21 +37,21 @@ class MainActivity : AppCompatActivity() {
             when (item.itemId) {
                 R.id.nav_home -> {
                     user?.let {
-                        openFragment(HomeFragment(), it)  // Pasamos 'user' al fragmento
+                        openFragment(HomeFragment(), it, proyectos)  // Pasamos 'user' al fragmento
                     }
                     true
                 }
 
                 R.id.nav_user -> {
                     user?.let {
-                        openFragment(UserFragment(), it)  // Pasamos 'user' al fragmento
+                        openFragment(UserFragment(), it, proyectos)  // Pasamos 'user' al fragmento
                     }
                     true
                 }
 
                 R.id.nav_settings -> {
                     user?.let {
-                        openFragment(SettingsFragment(), it)  // Pasamos 'user' al fragmento
+                        openFragment(SettingsFragment(), it, proyectos)  // Pasamos 'user' al fragmento
                     }
                     true
                 }
@@ -67,9 +67,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     // Método para cargar fragmentos
-    private fun openFragment(fragment: Fragment, user: Usuario) {
+    private fun openFragment(fragment: Fragment, user: Usuario, proyectos: List<Proyecto>) {
         val bundle = Bundle()
         bundle.putSerializable("user", user)  // Pasa el objeto 'user' al Bundle
+        bundle.putSerializable("proyectos", ArrayList(proyectos))
         fragment.arguments = bundle  // Establece el Bundle en el fragmento
 
         supportFragmentManager.beginTransaction()
