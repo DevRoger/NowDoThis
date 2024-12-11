@@ -14,7 +14,7 @@
           {
             "idUsuario": 101,
             "nombre": "María García",
-            "horasTrabajadas": 10.0
+            "horasTrabajadas": 10
           },
           {
             "idUsuario": 102,
@@ -35,7 +35,7 @@
           {
             "idUsuario": 103,
             "nombre": "Ana López",
-            "horasTrabajadas": 20.0
+            "horasTrabajadas": 20
           }
         ],
         "fechaInicio": "2024-04-11",
@@ -60,73 +60,36 @@
         "tipoTarea": "Desarrollo"
       },
       {
-        "id": 16,
-        "descripcion": "Diseño de la base de datos",
-        "estadoTarea": "Completado",
+        "id": 20,
+        "descripcion": "Integración de servicios externos",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Integración"
+      },
+      {
+        "id": 21,
+        "descripcion": "Documentación técnica",
+        "estadoTarea": "Sin hacer",
         "asignadoA": [
           {
             "idUsuario": 101,
             "nombre": "María García",
-            "horasTrabajadas": 10.0
-          },
-          {
-            "idUsuario": 102,
-            "nombre": "Pedro Rodríguez",
-            "horasTrabajadas": 8.5
+            "horasTrabajadas": 0
           }
         ],
-        "fechaInicio": "2024-04-02",
-        "fechaFin": "2024-04-10",
-        "prioridad": "Alta",
-        "tipoTarea": "Diseño"
-      },
-      {
-        "id": 17,
-        "descripcion": "Desarrollo del frontend",
-        "estadoTarea": "En proceso",
-        "asignadoA": [
-          {
-            "idUsuario": 103,
-            "nombre": "Ana López",
-            "horasTrabajadas": 20.0
-          }
-        ],
-        "fechaInicio": "2024-04-11",
-        "fechaFinEstimada": "2024-05-31",
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-30",
         "prioridad": "Media",
-        "tipoTarea": "Desarrollo"
-      },
-      {
-        "id": 18,
-        "descripcion": "Desarrollo del backend",
-        "estadoTarea": "Sin hacer",
-        "asignadoA": [
-          {
-            "idUsuario": 104,
-            "nombre": "Juan Pérez",
-            "horasTrabajadas": 0
-          }
-        ],
-        "fechaInicio": "",
-        "fechaFinEstimada": "",
-        "prioridad": "Alta",
-        "tipoTarea": "Desarrollo"
-      },
-      {
-        "id": 19,
-        "descripcion": "Desarrollo del backend",
-        "estadoTarea": "En proceso",
-        "asignadoA": [
-          {
-            "idUsuario": 104,
-            "nombre": "Juan Pérez",
-            "horasTrabajadas": 0
-          }
-        ],
-        "fechaInicio": "",
-        "fechaFinEstimada": "",
-        "prioridad": "Alta",
-        "tipoTarea": "Desarrollo"
+        "tipoTarea": "Documentación"
       }
     ]
   },
@@ -140,7 +103,7 @@
       {
         "id": 4,
         "descripcion": "Crear nuevo logotipo",
-        "estadoTarea": "Pendiente",
+        "estadoTarea": "Sin hacer",
         "asignadoA": [
           {
             "idUsuario": 103,
@@ -156,7 +119,7 @@
       {
         "id": 5,
         "descripcion": "Diseñar nueva paleta de colores",
-        "estadoTarea": "Pendiente",
+        "estadoTarea": "Sin hacer",
         "asignadoA": [
           {
             "idUsuario": 102,
@@ -168,6 +131,38 @@
         "fechaFinEstimada": "",
         "prioridad": "Media",
         "tipoTarea": "Diseño"
+      },
+      {
+        "id": 22,
+        "descripcion": "Actualizar tipografía corporativa",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-07-30",
+        "prioridad": "Baja",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 23,
+        "descripcion": "Manual de uso de la nueva identidad",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 106,
+            "nombre": "Carlos Méndez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-08-20",
+        "prioridad": "Alta",
+        "tipoTarea": "Documentación"
       }
     ]
   },
@@ -177,7 +172,40 @@
     "descripcion": "Mejorar la gestión de clientes",
     "fechaInicio": "2024-07-01",
     "fechaFinEstimada": "2024-09-30",
-    "tareas": []
+    "tareas": [
+      {
+        "id": 24,
+        "descripcion": "Configuración del sistema",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-08-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Implementación"
+      },
+      {
+        "id": 25,
+        "descripcion": "Capacitación del equipo",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-09-01",
+        "prioridad": "Media",
+        "tipoTarea": "Capacitación"
+      }
+    ]
   },
   {
     "id": 4,
@@ -194,7 +222,7 @@
           {
             "idUsuario": 105,
             "nombre": "Lucía Fernández",
-            "horasTrabajadas": 15.0
+            "horasTrabajadas": 15
           }
         ],
         "fechaInicio": "2024-03-01",
@@ -205,12 +233,12 @@
       {
         "id": 7,
         "descripcion": "Diseño de interfaz de usuario",
-        "estadoTarea": "En progreso",
+        "estadoTarea": "En proceso",
         "asignadoA": [
           {
             "idUsuario": 101,
             "nombre": "María García",
-            "horasTrabajadas": 12.0
+            "horasTrabajadas": 12
           }
         ],
         "fechaInicio": "2024-03-15",
@@ -221,7 +249,7 @@
       {
         "id": 8,
         "descripcion": "Pruebas del sistema",
-        "estadoTarea": "Pendiente",
+        "estadoTarea": "Sin hacer",
         "asignadoA": [
           {
             "idUsuario": 106,
@@ -233,139 +261,11 @@
         "fechaFinEstimada": "",
         "prioridad": "Alta",
         "tipoTarea": "Pruebas"
-      }
-    ]
-  },
-  {
-    "id": 5,
-    "nombre": "Creación de un programa de formación interna",
-    "descripcion": "Diseñar un curso para capacitar al equipo en nuevas tecnologías",
-    "fechaInicio": "2024-02-01",
-    "fechaFinEstimada": "2024-05-31",
-    "tareas": [
-      {
-        "id": 9,
-        "descripcion": "Investigación de contenidos",
-        "estadoTarea": "Completado",
-        "asignadoA": [
-          {
-            "idUsuario": 104,
-            "nombre": "Juan Pérez",
-            "horasTrabajadas": 20.0
-          }
-        ],
-        "fechaInicio": "2024-02-01",
-        "fechaFin": "2024-02-20",
-        "prioridad": "Alta",
-        "tipoTarea": "Investigación"
       },
       {
-        "id": 10,
-        "descripcion": "Diseño del material didáctico",
-        "estadoTarea": "En progreso",
-        "asignadoA": [
-          {
-            "idUsuario": 103,
-            "nombre": "Ana López",
-            "horasTrabajadas": 18.5
-          }
-        ],
-        "fechaInicio": "2024-03-01",
-        "fechaFinEstimada": "2024-04-15",
-        "prioridad": "Media",
-        "tipoTarea": "Diseño"
-      },
-      {
-        "id": 11,
-        "descripcion": "Evaluación y pruebas piloto",
-        "estadoTarea": "Pendiente",
-        "asignadoA": [
-          {
-            "idUsuario": 102,
-            "nombre": "Pedro Rodríguez",
-            "horasTrabajadas": 0
-          }
-        ],
-        "fechaInicio": "",
-        "fechaFinEstimada": "",
-        "prioridad": "Baja",
-        "tipoTarea": "Pruebas"
-      }
-    ]
-  },
-  {
-    "id": 6,
-    "nombre": "Expansión internacional",
-    "descripcion": "Abrir oficinas en mercados clave",
-    "fechaInicio": "2024-06-01",
-    "fechaFinEstimada": "2024-12-31",
-    "tareas": [
-      {
-        "id": 12,
-        "descripcion": "Estudio de mercado",
-        "estadoTarea": "Completado",
-        "asignadoA": [
-          {
-            "idUsuario": 105,
-            "nombre": "Lucía Fernández",
-            "horasTrabajadas": 30.0
-          },
-          {
-            "idUsuario": 106,
-            "nombre": "Carlos Méndez",
-            "horasTrabajadas": 25.0
-          }
-        ],
-        "fechaInicio": "2024-06-01",
-        "fechaFin": "2024-07-15",
-        "prioridad": "Alta",
-        "tipoTarea": "Investigación"
-      },
-      {
-        "id": 13,
-        "descripcion": "Establecimiento de contactos locales",
-        "estadoTarea": "En progreso",
-        "asignadoA": [
-          {
-            "idUsuario": 104,
-            "nombre": "Juan Pérez",
-            "horasTrabajadas": 10.0
-          }
-        ],
-        "fechaInicio": "2024-08-01",
-        "fechaFinEstimada": "2024-09-30",
-        "prioridad": "Alta",
-        "tipoTarea": "Logística"
-      }
-    ]
-  },
-  {
-    "id": 7,
-    "nombre": "Implementación de políticas de sostenibilidad",
-    "descripcion": "Crear un plan para reducir la huella de carbono de la empresa",
-    "fechaInicio": "2024-01-10",
-    "fechaFinEstimada": "2024-10-01",
-    "tareas": [
-      {
-        "id": 14,
-        "descripcion": "Auditoría ambiental",
-        "estadoTarea": "Completado",
-        "asignadoA": [
-          {
-            "idUsuario": 101,
-            "nombre": "María García",
-            "horasTrabajadas": 25.0
-          }
-        ],
-        "fechaInicio": "2024-01-10",
-        "fechaFin": "2024-02-15",
-        "prioridad": "Alta",
-        "tipoTarea": "Auditoría"
-      },
-      {
-        "id": 15,
-        "descripcion": "Diseño del plan de acción",
-        "estadoTarea": "Pendiente",
+        "id": 26,
+        "descripcion": "Implementación de reportes automáticos",
+        "estadoTarea": "Sin hacer",
         "asignadoA": [
           {
             "idUsuario": 105,
@@ -374,9 +274,9 @@
           }
         ],
         "fechaInicio": "",
-        "fechaFinEstimada": "",
-        "prioridad": "Media",
-        "tipoTarea": "Planificación"
+        "fechaFinEstimada": "2024-06-10",
+        "prioridad": "Alta",
+        "tipoTarea": "Desarrollo"
       }
     ]
   }

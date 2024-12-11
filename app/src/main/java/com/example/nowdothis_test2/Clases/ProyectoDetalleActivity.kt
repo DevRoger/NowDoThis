@@ -4,6 +4,7 @@ import TareasAdapter
 import android.annotation.SuppressLint
 import android.os.Bundle
 import android.util.Log
+import android.view.DragEvent
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
@@ -57,10 +58,11 @@ class ProyectoDetalleActivity : AppCompatActivity() {
         recyclerViewEnProceso.adapter = TareasAdapter(tareasEnProceso)
         recyclerViewCompletado.adapter = TareasAdapter(tareasCompletadas)
 
-        // Asocia el ItemTouchHelper para permitir el arrastre entre columnas
-        itemTouchHelper.attachToRecyclerView(recyclerViewSinHacer)
-        itemTouchHelper.attachToRecyclerView(recyclerViewEnProceso)
-        itemTouchHelper.attachToRecyclerView(recyclerViewCompletado)
+        setupDragAndDrop(recyclerViewSinHacer, tareasSinHacer, "Sin hacer")
+        setupDragAndDrop(recyclerViewEnProceso, tareasEnProceso, "En proceso")
+        setupDragAndDrop(recyclerViewCompletado, tareasCompletadas, "Completado")
+
+
 
         // Log para depuracion
         Log.d("ProyectoDetalleActivity", "Tareas Sin Hacer: $tareasSinHacer")
@@ -69,48 +71,50 @@ class ProyectoDetalleActivity : AppCompatActivity() {
     }
 
 
-    // Aquí va el ItemTouchHelper que permite mover las tareas entre columnas
-    val itemTouchHelper = ItemTouchHelper(object : ItemTouchHelper.SimpleCallback(
-        ItemTouchHelper.UP or ItemTouchHelper.DOWN, // Permitimos mover las tareas de arriba a abajo
-        ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT // Permitimos arrastrar las tareas entre las columnas (de izquierda a derecha)
-    ) {
+    @SuppressLint("NotifyDataSetChanged")
+    private fun setupDragAndDrop(recyclerView: RecyclerView, listaDestino: MutableList<Tarea>, estado: String) {
+        recyclerView.setOnDragListener { _, event ->
+            when (event.action) {
+                DragEvent.ACTION_DRAG_STARTED -> true
+                DragEvent.ACTION_DRAG_ENTERED -> true
+                DragEvent.ACTION_DRAG_LOCATION -> true
+                DragEvent.ACTION_DRAG_EXITED -> true
+                DragEvent.ACTION_DROP -> {
+                    val tareaArrastrada = event.localState as Tarea
 
-        override fun onMove(
-            recyclerView: RecyclerView,
-            viewHolder: RecyclerView.ViewHolder,
-            target: RecyclerView.ViewHolder
-        ): Boolean {
-            val fromPosition = viewHolder.adapterPosition
-            val toPosition = target.adapterPosition
+                    // Encuentra la lista origen
+                    val listaOrigen = when (tareaArrastrada.estadoTarea) {
+                        "Sin hacer" -> tareasSinHacer
+                        "En proceso" -> tareasEnProceso
+                        "Completado" -> tareasCompletadas
+                        else -> null
+                    }
 
-            // Mover la tarea dentro de la lista de tareas
-            val tarea = when (recyclerView.id) {
-                R.id.rvSinHacer -> tareasSinHacer
-                R.id.rvEnProceso -> tareasEnProceso
-                R.id.rvCompletado -> tareasCompletadas
-                else -> mutableListOf()
+                    if (listaOrigen != null && listaOrigen.contains(tareaArrastrada)) {
+                        // Mueve la tarea entre listas
+                        listaOrigen.remove(tareaArrastrada)
+                        listaDestino.add(tareaArrastrada)
+
+                        // Actualiza el estado de la tarea
+                        tareaArrastrada.estadoTarea = estado
+
+                        // Notifica a los adaptadores
+                        recyclerView.adapter?.notifyDataSetChanged()
+                        when (listaOrigen) {
+                            tareasSinHacer -> findViewById<RecyclerView>(R.id.rvSinHacer).adapter?.notifyDataSetChanged()
+                            tareasEnProceso -> findViewById<RecyclerView>(R.id.rvEnProceso).adapter?.notifyDataSetChanged()
+                            tareasCompletadas -> findViewById<RecyclerView>(R.id.rvCompletado).adapter?.notifyDataSetChanged()
+                        }
+                    }
+                    true
+                }
+                DragEvent.ACTION_DRAG_ENDED -> true
+                else -> false
             }
-
-            val tareaMovida = tarea[fromPosition]
-            tarea.removeAt(fromPosition)
-            tarea.add(toPosition, tareaMovida)
-
-            // Cambiar el estado de la tarea si es necesario
-            when (recyclerView.id) {
-                R.id.rvSinHacer -> tareaMovida.estadoTarea = "Sin hacer"
-                R.id.rvEnProceso -> tareaMovida.estadoTarea = "En proceso"
-                R.id.rvCompletado -> tareaMovida.estadoTarea = "Completado"
-            }
-
-            // Notificar al Adapter que los datos han cambiado
-            recyclerView.adapter?.notifyItemMoved(fromPosition, toPosition)
-
-            return true
         }
+    }
 
-        override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-            // No lo necesitamos para este caso
-        }
-    })
+
+
 }
 

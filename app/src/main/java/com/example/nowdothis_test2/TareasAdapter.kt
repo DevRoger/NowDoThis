@@ -1,3 +1,4 @@
+import android.content.ClipData
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,11 +31,18 @@ class TareasAdapter(private val tareas: MutableList<Tarea>) : RecyclerView.Adapt
         private val tvDescripcion: TextView = itemView.findViewById(R.id.tvDescripcionTarea)
 
         fun bind(tarea: Tarea) {
-            if (tarea.descripcion == null) {
-                tvDescripcion.text = "No hay descripción"
-            } else {
-                tvDescripcion.text = tarea.descripcion
+            tvDescripcion.text = tarea.descripcion ?: "No hay descripción"
+
+            // Configura el arrastre
+            itemView.setOnLongClickListener {
+                val clipData = ClipData.newPlainText("id", adapterPosition.toString())
+                val shadow = View.DragShadowBuilder(itemView)
+
+                // Inicia el arrastre
+                itemView.startDragAndDrop(clipData, shadow, tarea, 0)
+                true
             }
         }
     }
+
 }
