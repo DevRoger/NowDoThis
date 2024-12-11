@@ -39,6 +39,7 @@
         android:layout_height="wrap_content"
         android:text="Tareas:\n- Tarea 1: Diseño de la base de datos (Completado)\n- Tarea 2: Desarrollo del frontend (En progreso)\n- Tarea 3: Desarrollo del backend (Pendiente)"
         android:textColor="#000"
-        android:textSize="14sp" />
+        android:textSize="14sp"
+        android:paddingHorizontal="6dp"/>
 
 </LinearLayout>

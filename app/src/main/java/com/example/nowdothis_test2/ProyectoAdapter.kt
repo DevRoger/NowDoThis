@@ -47,7 +47,7 @@ class ProyectoAdapter(private val context: Context, private val proyectos: List<
 
         // Lista de tareas (puedes modificar esto si tienes más detalles de las tareas)
         val tareas = proyecto.tareas.joinToString("\n") { tarea ->
-            "${tarea.descripcion} (${tarea.estadoTarea})"
+            "- ${tarea.descripcion} (${tarea.estadoTarea})"
         }
         tvTareasProyecto.text = "Tareas:\n$tareas"
 

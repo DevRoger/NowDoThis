@@ -30,7 +30,7 @@
       {
         "id": 2,
         "descripcion": "Desarrollo del frontend",
-        "estadoTarea": "En progreso",
+        "estadoTarea": "En proceso",
         "asignadoA": [
           {
             "idUsuario": 103,
@@ -46,7 +46,76 @@
       {
         "id": 3,
         "descripcion": "Desarrollo del backend",
-        "estadoTarea": "Pendiente",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Alta",
+        "tipoTarea": "Desarrollo"
+      },
+      {
+        "id": 16,
+        "descripcion": "Diseño de la base de datos",
+        "estadoTarea": "Completado",
+        "asignadoA": [
+          {
+            "idUsuario": 101,
+            "nombre": "María García",
+            "horasTrabajadas": 10.0
+          },
+          {
+            "idUsuario": 102,
+            "nombre": "Pedro Rodríguez",
+            "horasTrabajadas": 8.5
+          }
+        ],
+        "fechaInicio": "2024-04-02",
+        "fechaFin": "2024-04-10",
+        "prioridad": "Alta",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 17,
+        "descripcion": "Desarrollo del frontend",
+        "estadoTarea": "En proceso",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 20.0
+          }
+        ],
+        "fechaInicio": "2024-04-11",
+        "fechaFinEstimada": "2024-05-31",
+        "prioridad": "Media",
+        "tipoTarea": "Desarrollo"
+      },
+      {
+        "id": 18,
+        "descripcion": "Desarrollo del backend",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "",
+        "prioridad": "Alta",
+        "tipoTarea": "Desarrollo"
+      },
+      {
+        "id": 19,
+        "descripcion": "Desarrollo del backend",
+        "estadoTarea": "En proceso",
         "asignadoA": [
           {
             "idUsuario": 104,

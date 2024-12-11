@@ -7,6 +7,7 @@ import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.ItemTouchHelper
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nowdothis_test2.R
 
@@ -46,6 +47,11 @@ class ProyectoDetalleActivity : AppCompatActivity() {
         val recyclerViewEnProceso: RecyclerView = findViewById(R.id.rvEnProceso)
         val recyclerViewCompletado: RecyclerView = findViewById(R.id.rvCompletado)
 
+        recyclerViewSinHacer.layoutManager = LinearLayoutManager(this)
+        recyclerViewEnProceso.layoutManager = LinearLayoutManager(this)
+        recyclerViewCompletado.layoutManager = LinearLayoutManager(this)
+
+
         // Establece los adaptadores
         recyclerViewSinHacer.adapter = TareasAdapter(tareasSinHacer)
         recyclerViewEnProceso.adapter = TareasAdapter(tareasEnProceso)
@@ -56,11 +62,10 @@ class ProyectoDetalleActivity : AppCompatActivity() {
         itemTouchHelper.attachToRecyclerView(recyclerViewEnProceso)
         itemTouchHelper.attachToRecyclerView(recyclerViewCompletado)
 
-        // Mostrar la información del proyecto en la vista
-        //findViewById<TextView>(R.id.tvNombreProyecto).text = proyecto.nombre
-        //findViewById<TextView>(R.id.tvDescripcionProyecto).text = proyecto.descripcion
-        //findViewById<TextView>(R.id.tvFechasProyecto).text =
-        //    "Fecha de inicio: ${proyecto.fechaInicio} - Fecha de fin estimada: ${proyecto.fechaFinEstimada}"
+        // Log para depuracion
+        Log.d("ProyectoDetalleActivity", "Tareas Sin Hacer: $tareasSinHacer")
+        Log.d("ProyectoDetalleActivity", "Tareas En Proceso: $tareasEnProceso")
+        Log.d("ProyectoDetalleActivity", "Tareas Completadas: $tareasCompletadas")
     }
 
 
