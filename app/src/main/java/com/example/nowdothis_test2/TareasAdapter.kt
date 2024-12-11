@@ -29,9 +29,11 @@ class TareasAdapter(private val tareas: MutableList<Tarea>) : RecyclerView.Adapt
 
     inner class TareaViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         private val tvDescripcion: TextView = itemView.findViewById(R.id.tvDescripcionTarea)
+        private val tvEstado: TextView = itemView.findViewById(R.id.tvEstadoTarea)
 
         fun bind(tarea: Tarea) {
             tvDescripcion.text = tarea.descripcion ?: "No hay descripción"
+            tvEstado.text = tarea.estadoTarea ?: "No hay descripción"
 
             // Configura el arrastre
             itemView.setOnLongClickListener {

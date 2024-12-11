@@ -38,5 +38,15 @@
     "rol": "Administrador",
     "telefono": "+34 612 999 000",
     "fechaIngreso": "2023-01-01"
+  },
+  {
+    "id": 5,
+    "nombre": "Ainhoa",
+    "apellido": "Ruiz",
+    "email": "ainhoaruiz@example.com",
+    "contrasena": "1234",
+    "rol": "Desarrolador",
+    "telefono": "+34 653 888 690",
+    "fechaIngreso": "2023-02-28"
   }
 ]
