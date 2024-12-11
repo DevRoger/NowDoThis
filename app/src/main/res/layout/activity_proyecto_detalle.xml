@@ -1,78 +1,129 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal"
-    android:padding="16dp">
+    android:orientation="vertical">
 
+    <TextView
+        android:id="@+id/txtNombreProyecto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="14dp"
+        android:layout_marginTop="14dp"
+        android:background="#DDDDDD"
+        android:paddingHorizontal="16sp"
+        android:paddingVertical="6sp"
+        android:text="Proyecto"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-    <!-- Columna 1: Sin hacer -->
+    <TextView
+        android:id="@+id/txtDescripcionProyecto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:text="Descripción"
+        android:textColor="#777777"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtFechaInicio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginVertical="2dp"
+        android:text="Fecha de inicio: 2024-06-30"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/txtFechaFin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginTop="2dp"
+
+        android:text="Fecha estimada de fin: 2024-06-30"
+        android:textSize="14sp" />
+
     <LinearLayout
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:orientation="horizontal"
+        android:paddingHorizontal="16dp">
 
-        <TextView
-            android:id="@+id/tvSinHacer"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Sin hacer"
-            android:textSize="18sp"
-            android:textStyle="bold" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvSinHacer"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
+        <!-- Columna 1: Sin hacer -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvSinHacer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sin hacer"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSinHacer"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Columna 2: En Proceso -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvEnProceso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="En Proceso"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvEnProceso"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <!-- Columna 3: Completado -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/tvCompletado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Completado"
+                android:textAlignment="center"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvCompletado"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+        </LinearLayout>
+
     </LinearLayout>
-
-    <!-- Columna 2: En Proceso -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-        <TextView
-            android:id="@+id/tvEnProceso"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="En Proceso"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvEnProceso"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
-
-    <!-- Columna 3: Completado -->
-    <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:orientation="vertical"
-        android:padding="8dp">
-
-        <TextView
-            android:id="@+id/tvCompletado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Completado"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rvCompletado"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" />
-    </LinearLayout>
-
 </LinearLayout>

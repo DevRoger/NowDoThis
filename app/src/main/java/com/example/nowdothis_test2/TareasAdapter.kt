@@ -1,4 +1,6 @@
 import android.content.ClipData
+import android.graphics.Color
+import android.graphics.drawable.GradientDrawable
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,7 +35,7 @@ class TareasAdapter(private val tareas: MutableList<Tarea>) : RecyclerView.Adapt
 
         fun bind(tarea: Tarea) {
             tvDescripcion.text = tarea.descripcion ?: "No hay descripción"
-            tvEstado.text = tarea.estadoTarea ?: "No hay descripción"
+            actualizarEstadoTarea(tvEstado, tarea.estadoTarea ?: "No hay descripción", tarea)
 
             // Configura el arrastre
             itemView.setOnLongClickListener {
@@ -45,6 +47,42 @@ class TareasAdapter(private val tareas: MutableList<Tarea>) : RecyclerView.Adapt
                 true
             }
         }
+
+        private fun actualizarEstadoTarea(textView: TextView, estado: String, tarea: Tarea) {
+
+            // Establece el texto
+            textView.text = tarea.estadoTarea ?: "No hay descripción"
+
+            // Crea el fondo redondeado y cambia el color según el estado
+            val shapeDrawable = GradientDrawable().apply {
+                cornerRadius = 40f // Radio de las esquinas
+            }
+
+            shapeDrawable.setStroke(2, Color.BLACK) // Grosor de 2dp y color negro
+
+            when (estado) {
+                "Completado" -> {
+                    shapeDrawable.setColor(Color.parseColor("#4CAF50")) // Fondo verde
+                    textView.setTextColor(Color.WHITE) // Texto blanco
+                }
+                "En proceso" -> {
+                    shapeDrawable.setColor(Color.parseColor("#FFD300")) // Fondo amarillo
+                    textView.setTextColor(Color.BLACK) // Texto negro
+                }
+                "Sin hacer" -> {
+                    shapeDrawable.setColor(Color.parseColor("#F44336")) // Fondo rojo
+                    textView.setTextColor(Color.WHITE) // Texto blanco
+                }
+                else -> {
+                    shapeDrawable.setColor(Color.parseColor("#9E9E9E")) // Fondo gris
+                    textView.setTextColor(Color.BLACK) // Texto negro
+                }
+            }
+
+            // Aplica el fondo redondeado al TextView
+            textView.background = shapeDrawable
+        }
+
     }
 
 }

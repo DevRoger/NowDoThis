@@ -1,16 +1,19 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_marginVertical="4dp"
+    android:background="@drawable/rounded_background_tarea"
     android:orientation="vertical"
-    android:padding="8dp"
-    android:background="#DDDDDD"
-    android:layout_marginVertical="4dp">
+    android:padding="8dp">
 
     <!-- Descripción de la tarea -->
     <TextView
         android:id="@+id/tvDescripcionTarea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:textSize="10dp"
+        android:textAlignment="center"
         android:text="Descripción de la tarea" />
 
     <!-- Estado de la tarea -->
@@ -18,5 +21,10 @@
         android:id="@+id/tvEstadoTarea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Estado" />
+        android:padding="4dp"
+        android:text="Estado"
+        android:textAlignment="center"
+        android:textSize="10dp"
+        android:textStyle="bold"
+        android:layout_marginTop="4dp"/>
 </LinearLayout>

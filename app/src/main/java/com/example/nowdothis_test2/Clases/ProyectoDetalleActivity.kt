@@ -62,6 +62,16 @@ class ProyectoDetalleActivity : AppCompatActivity() {
         setupDragAndDrop(recyclerViewEnProceso, tareasEnProceso, "En proceso")
         setupDragAndDrop(recyclerViewCompletado, tareasCompletadas, "Completado")
 
+        // Configuramos la información del proyecto
+        val txtNombreProyecto: TextView = findViewById(R.id.txtNombreProyecto)
+        val txtDescripcionProyecto: TextView = findViewById(R.id.txtDescripcionProyecto)
+        val txtFechaInicio: TextView = findViewById(R.id.txtFechaInicio)
+        val txtFechaFin: TextView = findViewById(R.id.txtFechaFin)
+
+        txtNombreProyecto.text = proyecto.nombre
+        txtDescripcionProyecto.text = proyecto.descripcion
+        txtFechaInicio.text = "Fecha de inicio: ${proyecto.fechaInicio}"
+        txtFechaFin.text = "Fecha estimada de fin: ${proyecto.fechaFinEstimada}"
 
 
         // Log para depuracion
