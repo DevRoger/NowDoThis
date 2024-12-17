@@ -59,7 +59,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/tvSinHacer"
@@ -83,7 +84,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/tvEnProceso"
@@ -107,7 +109,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:paddingHorizontal="8dp"
+            android:paddingTop="8dp">
 
             <TextView
                 android:id="@+id/tvCompletado"

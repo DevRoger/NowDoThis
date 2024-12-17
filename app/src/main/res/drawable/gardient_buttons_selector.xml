@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fondo para estado presionado -->
+    <item android:drawable="@drawable/gardient_buttons_pressed" android:state_pressed="true" />
+    <!-- Fondo para estado normal -->
+    <item android:drawable="@drawable/gardient_buttons" />
+</selector>

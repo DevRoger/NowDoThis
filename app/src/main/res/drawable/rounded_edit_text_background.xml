@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners android:radius="16dp" />
+    <solid
+        android:id="@+id/rounded_edit_text_background_color"
+        android:color="@color/white" />
+    <stroke
+        android:width="1dp"
+        android:color="#6ec2f4" />
+    <elevation android:elevation="4dp" />
+</shape>

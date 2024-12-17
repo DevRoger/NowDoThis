@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/frameId"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#ffffff">
 
     <!-- VideoView para mostrar el video de fondo -->
     <ImageView
@@ -9,57 +12,62 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:background="#D1A7D6"/>
+        android:background="@drawable/get_started_background" />
 
     <!-- Contenido de la interfaz de usuario, encima del video -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <!-- EditText de usuario -->
         <EditText
             android:id="@+id/edtxtUser"
             android:layout_width="300dp"
             android:layout_height="50dp"
-            android:hint="User"
-            android:textAlignment="center"
-            android:visibility="gone"
             android:layout_margin="10dp"
-            android:background="@color/white"
-            android:inputType="textPersonName"/>
+            android:background="@drawable/rounded_edit_text_background"
+            android:hint="User"
+            android:inputType="textPersonName"
+            android:textAlignment="center"
+            android:visibility="gone" />
 
         <!-- EditText de contraseña -->
         <EditText
             android:id="@+id/edtxtPassword"
             android:layout_width="300dp"
             android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/rounded_edit_text_background"
             android:hint="Password"
-            android:textAlignment="center"
             android:inputType="textPassword"
-            android:visibility="gone"
-            android:background="@color/white"
-            android:layout_margin="10dp"/>
+            android:textAlignment="center"
+            android:visibility="gone" />
 
         <!-- Botón de "Get Started" -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnGetStarted"
             android:layout_width="200dp"
-            android:layout_height="50dp"
-            android:text="Get Started"
+            android:layout_height="40dp"
             android:layout_marginTop="400dp"
-            android:backgroundTint="#BBBBBB"
-            android:textColor="@color/black"/>
+            android:background="@drawable/gardient_buttons_selector"
+            android:text="Get Started"
+            android:textColor="#4E6EA4"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
 
         <!-- Botón de "Sign In" -->
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnSignIn"
             android:layout_width="200dp"
-            android:layout_height="50dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/gardient_buttons_selector"
             android:text="Sign in"
-            android:backgroundTint="#BBBBBB"
-            android:textColor="@color/black"
-            android:visibility="gone"/>
+            android:textColor="#4E6EA4"
+            android:textStyle="bold"
+            android:visibility="gone"
+            app:backgroundTint="@null" />
     </LinearLayout>
 </FrameLayout>

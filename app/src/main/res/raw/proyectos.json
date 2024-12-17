@@ -90,9 +90,218 @@
         "fechaFinEstimada": "2024-06-30",
         "prioridad": "Media",
         "tipoTarea": "Documentación"
+      },
+      {
+        "id": 22,
+        "descripcion": "Diseño de la arquitectura de la aplicación",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-04-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 23,
+        "descripcion": "Pruebas unitarias del backend",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-05-10",
+        "prioridad": "Alta",
+        "tipoTarea": "Pruebas"
+      },
+      {
+        "id": 24,
+        "descripcion": "Pruebas de integración",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-01",
+        "prioridad": "Alta",
+        "tipoTarea": "Pruebas"
+      },
+      {
+        "id": 25,
+        "descripcion": "Pruebas de aceptación del cliente",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 106,
+            "nombre": "Carlos Méndez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-20",
+        "prioridad": "Alta",
+        "tipoTarea": "Pruebas"
+      },
+      {
+        "id": 26,
+        "descripcion": "Despliegue en el entorno de producción",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 101,
+            "nombre": "María García",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-25",
+        "prioridad": "Alta",
+        "tipoTarea": "Implementación"
+      },
+      {
+        "id": 27,
+        "descripcion": "Capacitación a usuarios finales",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-28",
+        "prioridad": "Media",
+        "tipoTarea": "Capacitación"
+      },
+      {
+        "id": 28,
+        "descripcion": "Actualización del manual del sistema",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 101,
+            "nombre": "María García",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-30",
+        "prioridad": "Media",
+        "tipoTarea": "Documentación"
+      },
+      {
+        "id": 29,
+        "descripcion": "Revisión de seguridad de la aplicación",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-05",
+        "prioridad": "Alta",
+        "tipoTarea": "Revisión"
+      },
+      {
+        "id": 30,
+        "descripcion": "Optimización de consultas a la base de datos",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 102,
+            "nombre": "Pedro Rodríguez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-05-20",
+        "prioridad": "Alta",
+        "tipoTarea": "Optimización"
+      },
+      {
+        "id": 31,
+        "descripcion": "Revisión de compatibilidad del frontend",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 103,
+            "nombre": "Ana López",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-05-15",
+        "prioridad": "Media",
+        "tipoTarea": "Revisión"
+      },
+      {
+        "id": 32,
+        "descripcion": "Creación de pruebas automatizadas",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 106,
+            "nombre": "Carlos Méndez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-05-30",
+        "prioridad": "Alta",
+        "tipoTarea": "Desarrollo"
+      },
+      {
+        "id": 33,
+        "descripcion": "Configuración del entorno de pruebas",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-05-25",
+        "prioridad": "Media",
+        "tipoTarea": "Configuración"
+      },
+      {
+        "id": 34,
+        "descripcion": "Monitoreo del rendimiento en producción",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 105,
+            "nombre": "Lucía Fernández",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-06-30",
+        "prioridad": "Alta",
+        "tipoTarea": "Monitoreo"
       }
     ]
-  },
+  }
+,
   {
     "id": 2,
     "nombre": "Rediseño de la identidad corporativa",
@@ -277,6 +486,182 @@
         "fechaFinEstimada": "2024-06-10",
         "prioridad": "Alta",
         "tipoTarea": "Desarrollo"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Migración a la nube",
+    "descripcion": "Migrar todos los sistemas y datos de la empresa a una infraestructura en la nube",
+    "fechaInicio": "2024-08-01",
+    "fechaFinEstimada": "2024-12-31",
+    "tareas": [
+      {
+        "id": 27,
+        "descripcion": "Evaluación de proveedores de servicios de nube",
+        "estadoTarea": "En proceso",
+        "asignadoA": [
+          {
+            "idUsuario": 107,
+            "nombre": "Sofía Ramírez",
+            "horasTrabajadas": 5
+          }
+        ],
+        "fechaInicio": "2024-08-01",
+        "fechaFinEstimada": "2024-08-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Análisis"
+      },
+      {
+        "id": 28,
+        "descripcion": "Migración de bases de datos",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 108,
+            "nombre": "Luis Torres",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-10-01",
+        "prioridad": "Alta",
+        "tipoTarea": "Implementación"
+      },
+      {
+        "id": 29,
+        "descripcion": "Capacitación en nuevas herramientas",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 109,
+            "nombre": "Elena Castillo",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-11-15",
+        "prioridad": "Media",
+        "tipoTarea": "Capacitación"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "nombre": "Implementación de inteligencia artificial",
+    "descripcion": "Integrar modelos de IA para mejorar la eficiencia operativa",
+    "fechaInicio": "2024-09-01",
+    "fechaFinEstimada": "2025-01-31",
+    "tareas": [
+      {
+        "id": 30,
+        "descripcion": "Desarrollo de un modelo predictivo",
+        "estadoTarea": "En proceso",
+        "asignadoA": [
+          {
+            "idUsuario": 104,
+            "nombre": "Juan Pérez",
+            "horasTrabajadas": 8
+          },
+          {
+            "idUsuario": 110,
+            "nombre": "Laura Gómez",
+            "horasTrabajadas": 12
+          }
+        ],
+        "fechaInicio": "2024-09-15",
+        "fechaFinEstimada": "2024-12-01",
+        "prioridad": "Alta",
+        "tipoTarea": "Desarrollo"
+      },
+      {
+        "id": 31,
+        "descripcion": "Validación de datos para entrenamiento",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 107,
+            "nombre": "Sofía Ramírez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-10-30",
+        "prioridad": "Media",
+        "tipoTarea": "Análisis"
+      },
+      {
+        "id": 32,
+        "descripcion": "Implementación del sistema de IA",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 108,
+            "nombre": "Luis Torres",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2025-01-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Implementación"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Optimización del sistema de e-commerce",
+    "descripcion": "Mejorar el rendimiento y la experiencia del usuario en la plataforma de comercio electrónico",
+    "fechaInicio": "2024-10-01",
+    "fechaFinEstimada": "2025-03-31",
+    "tareas": [
+      {
+        "id": 33,
+        "descripcion": "Análisis de velocidad de carga",
+        "estadoTarea": "En proceso",
+        "asignadoA": [
+          {
+            "idUsuario": 110,
+            "nombre": "Laura Gómez",
+            "horasTrabajadas": 4
+          }
+        ],
+        "fechaInicio": "2024-10-01",
+        "fechaFinEstimada": "2024-10-15",
+        "prioridad": "Alta",
+        "tipoTarea": "Análisis"
+      },
+      {
+        "id": 34,
+        "descripcion": "Rediseño de la interfaz de usuario",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 101,
+            "nombre": "María García",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2024-12-31",
+        "prioridad": "Alta",
+        "tipoTarea": "Diseño"
+      },
+      {
+        "id": 35,
+        "descripcion": "Pruebas A/B de nuevas funcionalidades",
+        "estadoTarea": "Sin hacer",
+        "asignadoA": [
+          {
+            "idUsuario": 106,
+            "nombre": "Carlos Méndez",
+            "horasTrabajadas": 0
+          }
+        ],
+        "fechaInicio": "",
+        "fechaFinEstimada": "2025-02-28",
+        "prioridad": "Media",
+        "tipoTarea": "Pruebas"
       }
     ]
   }
