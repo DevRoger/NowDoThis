@@ -21,8 +21,9 @@
         android:id="@+id/bottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#DBEEFF"
-        app:itemRippleColor="#BEE1FF"
+        android:background="#6EC2F4"
+        app:itemRippleColor="#DDDDDD"
+        app:itemTextColor="#FFFFFF"
         app:menu="@menu/bottom_nav_menu" />
 
 </LinearLayout>

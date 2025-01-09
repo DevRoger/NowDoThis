@@ -3,7 +3,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#DBEEFF">
 
     <TextView
         android:id="@+id/txtNombreProyecto"
@@ -11,9 +12,10 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="14dp"
         android:layout_marginTop="14dp"
-        android:background="#DDDDDD"
+        android:background="@drawable/background_blue_rounded"
         android:paddingHorizontal="16sp"
         android:paddingVertical="6sp"
+        android:textColor="#FFF"
         android:text="Proyecto"
         android:textSize="24sp"
         android:textStyle="bold" />
@@ -69,7 +71,8 @@
                 android:text="Sin hacer"
                 android:textAlignment="center"
                 android:textSize="18sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rvSinHacer"
@@ -127,6 +130,5 @@
                 android:layout_height="0dp"
                 android:layout_weight="1" />
         </LinearLayout>
-
     </LinearLayout>
 </LinearLayout>

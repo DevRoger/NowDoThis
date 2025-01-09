@@ -31,6 +31,7 @@ class ProyectoAdapter(private val context: Context, private val proyectos: List<
         val tvDescripcionProyecto = view.findViewById<TextView>(R.id.tvDescripcionProyecto)
         val tvFechasProyecto = view.findViewById<TextView>(R.id.tvFechasProyecto)
         val tvTareasProyecto = view.findViewById<TextView>(R.id.tvTareasProyecto)
+        val tvTareasProyectoAdicionales = view.findViewById<TextView>(R.id.tvTareasProyectoAdicionales)
 
         // Asignando los valores al TextView
         tvNombreProyecto.text = proyecto.nombre
@@ -42,14 +43,23 @@ class ProyectoAdapter(private val context: Context, private val proyectos: List<
         val fechaFinEstimada =
             proyecto.fechaFinEstimada // Asumiendo que 'fechaFinEstimada' es una propiedad de tipo String
         tvFechasProyecto.text =
-            "Fecha de inicio: $fechaInicio - Fecha de fin estimada: $fechaFinEstimada"
+            "Inicio: $fechaInicio - Fin estimado: $fechaFinEstimada"
 
 
-        // Lista de tareas (puedes modificar esto si tienes más detalles de las tareas)
-        val tareas = proyecto.tareas.joinToString("\n") { tarea ->
+        // Mostrar las primeras 5 tareas
+        val tareasTextoLimitadas = proyecto.tareas.take(5).joinToString("\n") { tarea ->
             "- ${tarea.descripcion} (${tarea.estadoTarea})"
         }
-        tvTareasProyecto.text = "Tareas:\n$tareas"
+        tvTareasProyecto.text = tareasTextoLimitadas
+
+        // Mostrar las tareas adicionales si hay más de 5
+        if (proyecto.tareas.size > 5) {
+            val tareasAdicionales = "+ ${proyecto.tareas.size - 5} tareas adicionales"
+            tvTareasProyectoAdicionales.text = tareasAdicionales
+        } else {
+            tvTareasProyectoAdicionales.text = ""  // Vacío si no hay tareas adicionales
+        }
+
 
         view.setOnClickListener {
             // Aquí es donde se inicia la actividad

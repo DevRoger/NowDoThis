@@ -34,6 +34,9 @@ class MainActivity : AppCompatActivity() {
         // Configura el BottomNavigationView
         val bottomNavigationView: BottomNavigationView = findViewById(R.id.bottomNavigationView)
 
+        // Quitar tinte predeterminado a los icons
+        bottomNavigationView.itemIconTintList = null
+
         // Configura el comportamiento de los clics en los ítems
         bottomNavigationView.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {

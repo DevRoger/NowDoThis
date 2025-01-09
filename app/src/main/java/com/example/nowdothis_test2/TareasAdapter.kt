@@ -82,7 +82,5 @@ class TareasAdapter(private val tareas: MutableList<Tarea>) : RecyclerView.Adapt
             // Aplica el fondo redondeado al TextView
             textView.background = shapeDrawable
         }
-
     }
-
 }
