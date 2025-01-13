@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity() {
                 else -> false
             }
         }
-
         // Cargar el fragmento por defecto (HomeFragment)
         if (savedInstanceState == null) {
             bottomNavigationView.selectedItemId = R.id.nav_home

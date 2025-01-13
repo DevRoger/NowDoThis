@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.nowdothis_test2.Clases.Tarea
 import com.example.nowdothis_test2.R
 
-class TareasAdapter(private val tareas: MutableList<Tarea>) : RecyclerView.Adapter<TareasAdapter.TareaViewHolder>() {
+class TareasAdapter(private val tareas: MutableList<Tarea>) :
+    RecyclerView.Adapter<TareasAdapter.TareaViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TareaViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_tarea, parent, false)
@@ -65,14 +66,17 @@ class TareasAdapter(private val tareas: MutableList<Tarea>) : RecyclerView.Adapt
                     shapeDrawable.setColor(Color.parseColor("#4CAF50")) // Fondo verde
                     textView.setTextColor(Color.WHITE) // Texto blanco
                 }
+
                 "En proceso" -> {
                     shapeDrawable.setColor(Color.parseColor("#FFD300")) // Fondo amarillo
                     textView.setTextColor(Color.BLACK) // Texto negro
                 }
+
                 "Sin hacer" -> {
                     shapeDrawable.setColor(Color.parseColor("#F44336")) // Fondo rojo
                     textView.setTextColor(Color.WHITE) // Texto blanco
                 }
+
                 else -> {
                     shapeDrawable.setColor(Color.parseColor("#9E9E9E")) // Fondo gris
                     textView.setTextColor(Color.BLACK) // Texto negro

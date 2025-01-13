@@ -7,10 +7,13 @@ import android.util.Log
 import android.view.DragEvent
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.nowdothis_test2.R
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
+import java.io.File
+import java.io.InputStream
 
 class ProyectoDetalleActivity : AppCompatActivity() {
 
@@ -58,9 +61,9 @@ class ProyectoDetalleActivity : AppCompatActivity() {
         recyclerViewEnProceso.adapter = TareasAdapter(tareasEnProceso)
         recyclerViewCompletado.adapter = TareasAdapter(tareasCompletadas)
 
-        setupDragAndDrop(recyclerViewSinHacer, tareasSinHacer, "Sin hacer")
-        setupDragAndDrop(recyclerViewEnProceso, tareasEnProceso, "En proceso")
-        setupDragAndDrop(recyclerViewCompletado, tareasCompletadas, "Completado")
+        setupDragAndDrop(recyclerViewSinHacer, tareasSinHacer, "Sin hacer", proyecto)
+        setupDragAndDrop(recyclerViewEnProceso, tareasEnProceso, "En proceso", proyecto)
+        setupDragAndDrop(recyclerViewCompletado, tareasCompletadas, "Completado", proyecto)
 
         // Configuramos la información del proyecto
         val txtNombreProyecto: TextView = findViewById(R.id.txtNombreProyecto)
@@ -82,7 +85,12 @@ class ProyectoDetalleActivity : AppCompatActivity() {
 
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun setupDragAndDrop(recyclerView: RecyclerView, listaDestino: MutableList<Tarea>, estado: String) {
+    private fun setupDragAndDrop(
+        recyclerView: RecyclerView,
+        listaDestino: MutableList<Tarea>,
+        estado: String,
+        proyecto: Proyecto
+    ) {
         recyclerView.setOnDragListener { _, event ->
             when (event.action) {
                 DragEvent.ACTION_DRAG_STARTED -> true
@@ -108,6 +116,9 @@ class ProyectoDetalleActivity : AppCompatActivity() {
                         // Actualiza el estado de la tarea
                         tareaArrastrada.estadoTarea = estado
 
+                        // Actualiza el JSON de proyectos
+                        guardarProyectosEnJson(actualizarProyectoEnLista(proyecto))
+
                         // Notifica a los adaptadores
                         recyclerView.adapter?.notifyDataSetChanged()
                         when (listaOrigen) {
@@ -118,12 +129,48 @@ class ProyectoDetalleActivity : AppCompatActivity() {
                     }
                     true
                 }
+
                 DragEvent.ACTION_DRAG_ENDED -> true
                 else -> false
             }
         }
     }
 
+
+    private fun guardarProyectosEnJson(proyectos: List<Proyecto>) {
+        val file = File(filesDir, "proyectos.json")
+        val gson = Gson()
+        val json = gson.toJson(proyectos)
+        file.writeText(json)
+        Log.d("ProyectoDetalleActivity", "Archivo JSON actualizado: $json")
+    }
+
+    private fun actualizarProyectoEnLista(proyectoModificado: Proyecto): List<Proyecto> {
+        val proyectos = leerProyectosDesdeJson().toMutableList()
+        val indice = proyectos.indexOfFirst { it.id == proyectoModificado.id }
+
+        if (indice != -1) {
+            proyectos[indice] = proyectoModificado
+        }
+
+        return proyectos
+    }
+
+    private fun leerProyectosDesdeJson(): List<Proyecto> {
+        val file = File(filesDir, "proyectos.json")
+
+        // Si el archivo local no existe, copia el recurso raw al almacenamiento interno
+        if (!file.exists()) {
+            val inputStream: InputStream = resources.openRawResource(R.raw.proyectos)
+            file.writeText(inputStream.bufferedReader().use { it.readText() })
+        }
+
+        // Lee el archivo local
+        val json = file.readText()
+        val gson = Gson()
+        val tipoListaProyectos = object : TypeToken<List<Proyecto>>() {}.type
+        return gson.fromJson(json, tipoListaProyectos)
+    }
 
 
 }

@@ -1,11 +1,9 @@
 package com.example.nowdothis_test2
 
-import android.animation.ArgbEvaluator
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import android.view.animation.AlphaAnimation
@@ -13,7 +11,6 @@ import android.view.animation.AnimationSet
 import android.view.animation.TranslateAnimation
 import android.widget.Button
 import android.widget.EditText
-import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -22,7 +19,6 @@ import com.google.gson.Gson
 import java.io.BufferedReader
 import java.io.InputStream
 import java.io.InputStreamReader
-import kotlin.text.toFloat
 
 
 class GetStarted : AppCompatActivity() {
@@ -34,10 +30,7 @@ class GetStarted : AppCompatActivity() {
         // Lectura de archivos JSON
         val usuarios = leerUsuariosJson(this)
 
-        val frameId = findViewById<FrameLayout>(R.id.frameId);
-
         val btnGetStarted = findViewById<Button>(R.id.btnGetStarted)
-
 
         val edtxtUser = findViewById<EditText>(R.id.edtxtUser)
         val edtxtPassword = findViewById<EditText>(R.id.edtxtPassword)
@@ -64,9 +57,6 @@ class GetStarted : AppCompatActivity() {
 
             // Inicia la animación en el fondo
             imgFondo.startAnimation(animationSet)
-
-
-
 
             // Animación para que el botón desaparezca lentamente (desvanezca) durante 5 segundos
             btnGetStarted.animate()
@@ -97,7 +87,6 @@ class GetStarted : AppCompatActivity() {
                     }
                 }
         }
-
 
         btnSigIn.setOnClickListener {
             val username = edtxtUser.text.toString()
@@ -149,4 +138,39 @@ class GetStarted : AppCompatActivity() {
             return emptyList()
         }
     }
+
+    /*
+    fun decrypt(encryptedBase64: String, key: String): String {
+        try {
+            // Convertir de Base64 a bytes
+            val encryptedBytes = Base64.getDecoder().decode(encryptedBase64)
+
+            // Asegúrate de que la clave tenga 16 bytes (AES-128)
+            val validKey = key.take(16).padEnd(16, '0').toByteArray(Charsets.UTF_8)
+            val secretKey: Key = SecretKeySpec(validKey, "AES")
+
+            // AES en modo CBC con padding PKCS5
+            val cipher = Cipher.getInstance("AES/CBC/PKCS5Padding")
+
+            // Vector de inicialización (IV) de 16 bytes con ceros
+            val iv = ByteArray(16) // Vector de inicialización de 16 bytes con ceros
+            cipher.init(Cipher.DECRYPT_MODE, secretKey, javax.crypto.spec.IvParameterSpec(iv))
+
+            // Desencriptar los bytes
+            val byteArrayInputStream = ByteArrayInputStream(encryptedBytes)
+            val cipherInputStream = CipherInputStream(byteArrayInputStream, cipher)
+
+            // Leer el flujo desencriptado
+            val decryptedText = cipherInputStream.reader().readText()
+            cipherInputStream.close()
+
+            return decryptedText
+
+        } catch (e: IOException) {
+            throw RuntimeException("Error al desencriptar los datos", e)
+        } catch (e: Exception) {
+            throw RuntimeException("Error desencriptando el archivo", e)
+        }
+    }
+    */
 }

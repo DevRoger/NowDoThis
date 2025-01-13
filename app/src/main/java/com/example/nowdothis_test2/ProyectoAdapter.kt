@@ -31,7 +31,8 @@ class ProyectoAdapter(private val context: Context, private val proyectos: List<
         val tvDescripcionProyecto = view.findViewById<TextView>(R.id.tvDescripcionProyecto)
         val tvFechasProyecto = view.findViewById<TextView>(R.id.tvFechasProyecto)
         val tvTareasProyecto = view.findViewById<TextView>(R.id.tvTareasProyecto)
-        val tvTareasProyectoAdicionales = view.findViewById<TextView>(R.id.tvTareasProyectoAdicionales)
+        val tvTareasProyectoAdicionales =
+            view.findViewById<TextView>(R.id.tvTareasProyectoAdicionales)
 
         // Asignando los valores al TextView
         tvNombreProyecto.text = proyecto.nombre

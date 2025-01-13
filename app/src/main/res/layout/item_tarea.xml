@@ -12,19 +12,19 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="2dp"
-        android:textSize="10dp"
+        android:text="Descripción de la tarea"
         android:textAlignment="center"
-        android:text="Descripción de la tarea" />
+        android:textSize="10dp" />
 
     <!-- Estado de la tarea -->
     <TextView
         android:id="@+id/tvEstadoTarea"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:padding="4dp"
         android:text="Estado"
         android:textAlignment="center"
         android:textSize="10dp"
-        android:textStyle="bold"
-        android:layout_marginTop="4dp"/>
+        android:textStyle="bold" />
 </LinearLayout>
