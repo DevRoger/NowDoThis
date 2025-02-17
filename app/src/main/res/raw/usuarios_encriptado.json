@@ -1,0 +1,53 @@
+[
+    {
+      "id": 1,
+      "nombre": "Juan",
+      "apellido": "Pérez",
+      "email": "juanperez@example.com",
+      "contrasena": "PwVl7PYPDavdLSqeb3FQBA==",
+      "rol": "Desarrollador",
+      "telefono": "+34 612 345 678",
+      "fechaIngreso": "2023-03-10"
+    },
+    {
+      "id": 2,
+      "nombre": "María",
+      "apellido": "García",
+      "email": "mariagarcia@example.com",
+      "contrasena": "PwVl7PYPDavdLSqeb3FQBA==",
+      "rol": "Gerente de Proyecto",
+      "telefono": "+34 612 987 654",
+      "fechaIngreso": "2023-05-20"
+    },
+    {
+      "id": 3,
+      "nombre": "Pedro",
+      "apellido": "Rodríguez",
+      "email": "pedrorodriguez@example.com",
+      "contrasena": "PwVl7PYPDavdLSqeb3FQBA==",
+      "rol": "Diseñador",
+      "telefono": "+34 612 123 456",
+      "fechaIngreso": "2023-06-15"
+    },
+    {
+      "id": 4,
+      "nombre": "Ana",
+      "apellido": "Sánchez",
+      "email": "anasanchez@example.com",
+      "contrasena": "PwVl7PYPDavdLSqeb3FQBA==",
+      "rol": "Administrador",
+      "telefono": "+34 612 999 000",
+      "fechaIngreso": "2023-01-01"
+    },
+    {
+      "id": 5,
+      "nombre": "Ainhoa",
+      "apellido": "Ruiz",
+      "email": "ainhoaruiz@example.com",
+      "contrasena": "PwVl7PYPDavdLSqeb3FQBA==",
+      "rol": "Desarrolador",
+      "telefono": "+34 653 888 690",
+      "fechaIngreso": "2023-02-28"
+    }
+  ]
+  
